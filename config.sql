@@ -54,11 +54,13 @@ CREATE TABLE issues (
   priority_id INT NOT NULL,
   creator_user_id INT NOT NULL,
   assigned_user_id INT NULL,
+  project_id INT NOT NULL,
   active BOOLEAN NOT NULL DEFAULT TRUE,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   FOREIGN KEY (status_id) REFERENCES issue_status(id),
   FOREIGN KEY (priority_id) REFERENCES issue_priorities(id),
+  FOREIGN KEY (project_id) REFERENCES projects(id),
   FOREIGN KEY (creator_user_id) REFERENCES users(id),
   FOREIGN KEY (assigned_user_id) REFERENCES users(id)
 );

@@ -1,4 +1,6 @@
-DB_HOST=localhost
+DB_HOST=
 DB_NAME=issue_tracker_db
-DB_USER=root
+DB_USER=
 DB_PASS=
+SECRET_KEY='g2yfe434rhplrbjf40ty5hr6h3wb8545-uv67j6g85zc4zr83qvqat5ymmuy2xcry4oh6jh5nlh8'
+ENCRYPTION_METHOD=''
