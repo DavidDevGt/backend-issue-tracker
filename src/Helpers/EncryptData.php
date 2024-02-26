@@ -13,7 +13,7 @@ class EncryptData
         return $_ENV['SECRET_KEY'];
     }
 
-    private static function getEncryptionMethod()
+    public static function getEncryptionMethod()
     {
         return $_ENV['ENCRYPTION_METHOD'];
     }
