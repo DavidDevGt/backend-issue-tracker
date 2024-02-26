@@ -29,7 +29,11 @@ class Issue
 
     public function detach(IssueObserverInterface $observer)
     {
-        // Lógica para remover un observador de la lista
+        foreach ($this->observers as $key => $obs) {
+            if ($observer === $obs) {
+                unset($this->observers[$key]);
+            }
+        }
     }
 
     public function notify()
