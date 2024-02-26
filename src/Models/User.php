@@ -17,6 +17,10 @@ class User
     private $created_at;
     private $updated_at;
 
+    protected function getDbConnection() {
+        return Database::getInstance()->getConnection();
+    }
+
     // setters
     public function setId($id)
     {
@@ -80,7 +84,5 @@ class User
         return EncryptData::verifyPassword($inputPassword, $this->password);
     }
 
-    protected function getDbConnection() {
-        return Database::getInstance()->getConnection();
-    }
+
 }
